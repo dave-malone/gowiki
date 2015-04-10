@@ -1,0 +1,12 @@
+Create a MySQL database named 'wiki', a user named 'wiki' with no password.
+
+MySQL database as a Docker Container:
+docker run --name gowiki-mysql --net=host -p 3306:3306 -e MYSQL_ROOT_PASSWORD=gowiki -e MYSQL_DATABASE=gowiki -d mysql
+
+
+Start MySQL as a server from the CLI:
+login via mysql cli: mysql -u root -p
+
+CREATE USER 'wiki'@'localhost';
+GRANT ALL PRIVILEGES ON wiki . * TO 'wiki'@'localhost';
+flush privileges;
